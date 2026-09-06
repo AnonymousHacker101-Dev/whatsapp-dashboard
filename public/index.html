@@ -3,33 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Dashboard</title>
+    <title>WhatsApp Marketing Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>WhatsApp Dashboard</h1>
-        <p class="subtitle">Customer messaging panel</p>
+<div class="container">
 
-        <label>Customer Name</label>
-        <input id="name" type="text" placeholder="Enter customer name">
+    <h1>WhatsApp Dashboard</h1>
+    <p class="subtitle">Marketing customer manager</p>
 
-        <label>WhatsApp Number</label>
-        <input id="phone" type="tel" placeholder="+923001234567">
-
-        <label class="consent">
-            <input id="consent" type="checkbox">
-            Customer agreed to receive WhatsApp marketing
-        </label>
-
-        <button id="sendBtn">Send Message</button>
-
-        <p id="result"></p>
+    <div class="upload-box">
+        <label for="csvFile">Upload Customer CSV</label>
+        <input id="csvFile" type="file" accept=".csv,text/csv">
+        <p class="hint">CSV format: name,phone</p>
     </div>
 
-    <script src="app.js"></script>
+    <div id="summary" class="summary hidden">
+        <strong id="customerCount">0</strong>
+        <span>customers loaded</span>
+    </div>
+
+    <div id="previewSection" class="hidden">
+        <h2>Customer Preview</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>WhatsApp Number</th>
+                    </tr>
+                </thead>
+
+                <tbody id="customerList"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <button id="sendBtn" disabled>
+        Send Messages
+    </button>
+
+    <p id="result"></p>
+
+</div>
+
+<script src="app.js"></script>
 
 </body>
 </html>
