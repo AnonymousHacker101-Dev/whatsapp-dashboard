@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>WhatsApp Dashboard</h1>
+        <p class="subtitle">Customer messaging panel</p>
+
+        <label>Customer Name</label>
+        <input id="name" type="text" placeholder="Enter customer name">
+
+        <label>WhatsApp Number</label>
+        <input id="phone" type="tel" placeholder="+923001234567">
+
+        <label class="consent">
+            <input id="consent" type="checkbox">
+            Customer agreed to receive WhatsApp marketing
+        </label>
+
+        <button id="sendBtn">Send Message</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
